@@ -1,0 +1,199 @@
+<div class="min-h-screen bg-gray-50 font-sans text-gray-800 flex flex-col relative">
+  <!-- Header / Logo Area -->
+  <header class="w-full py-6 text-center bg-white shadow-sm">
+    <h1 class="text-2xl font-bold text-brand-dark">Vem Limpeza Academy</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow flex items-center justify-center p-4 sm:p-6 lg:p-8">
+    <div class="max-w-3xl w-full bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+      
+      <!-- Top Banner Area -->
+      <div class="bg-brand-dark text-white p-8 text-center relative overflow-hidden">
+        <!-- Decorative background circles -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
+          <div class="absolute -top-24 -left-24 w-64 h-64 rounded-full bg-white"></div>
+          <div class="absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-white"></div>
+        </div>
+
+        <div class="relative z-10 animate-fade-in-up">
+          <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-brand-light/20 text-brand-light mb-6 border-4 border-white/10">
+            <mat-icon class="text-5xl w-12 h-12 flex items-center justify-center">mark_email_unread</mat-icon>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4 tracking-tight">Quase lá! Verifique o seu email agora 📩</h2>
+          <p class="text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto font-light">
+            Enviamos um email com a confirmação da sua inscrição e o seu ebook gratuito.
+          </p>
+        </div>
+      </div>
+
+      <div class="p-6 sm:p-10">
+        
+        <!-- Urgency & Social Proof -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 animate-fade-in-up delay-100">
+          <div class="flex items-center gap-2 text-amber-600 bg-amber-50 px-4 py-2 rounded-full text-sm font-medium border border-amber-100">
+            <mat-icon class="text-sm w-4 h-4 flex items-center justify-center">hourglass_top</mat-icon>
+            <span>A confirmação é necessária para garantir sua vaga no curso.</span>
+          </div>
+        </div>
+
+        <!-- Steps -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 animate-fade-in-up delay-200">
+          <div class="space-y-6">
+            <h3 class="text-xl font-semibold text-brand-dark border-b pb-2">Siga estes passos:</h3>
+            
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-light text-white flex items-center justify-center font-bold shadow-md">1</div>
+              <div>
+                <p class="font-medium text-gray-900">Acesse o seu email</p>
+                <p class="text-sm text-gray-500">Abra o aplicativo ou site do seu provedor de email.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-light text-white flex items-center justify-center font-bold shadow-md">2</div>
+              <div>
+                <p class="font-medium text-gray-900">Procure por "Vem Limpeza Academy"</p>
+                <p class="text-sm text-gray-500">Pode levar alguns minutos para chegar.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-light text-white flex items-center justify-center font-bold shadow-md">3</div>
+              <div>
+                <p class="font-medium text-gray-900">Clique no link de confirmação</p>
+                <p class="text-sm text-gray-500">Isso garante a sua vaga no curso.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-light text-white flex items-center justify-center font-bold shadow-md">4</div>
+              <div>
+                <p class="font-medium text-gray-900">Baixe o seu ebook gratuito</p>
+                <p class="text-sm text-gray-500">O link estará no mesmo email.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visual / Ebook Promo -->
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 flex flex-col items-center justify-center text-center relative overflow-hidden group">
+            <div class="absolute inset-0 bg-gradient-to-br from-brand-light/5 to-brand-dark/5 opacity-50"></div>
+            
+            <div class="relative z-10 mb-4 transform transition-transform duration-500 group-hover:scale-105">
+              <!-- Ebook mockup representation -->
+              <div class="w-32 h-44 bg-white rounded-r-lg rounded-l-sm shadow-lg border-l-4 border-brand-dark flex flex-col items-center justify-center p-3 relative overflow-hidden">
+                @if (generatedImage()) {
+                  <img [src]="generatedImage()" alt="Capa do Ebook" class="absolute inset-0 w-full h-full object-cover" referrerpolicy="no-referrer" />
+                } @else {
+                  <div class="absolute top-2 right-2 text-brand-light opacity-50">
+                    <mat-icon>auto_stories</mat-icon>
+                  </div>
+                  <div class="w-full h-2 bg-gray-200 rounded-full mb-2"></div>
+                  <div class="w-3/4 h-2 bg-gray-200 rounded-full mb-6"></div>
+                  <mat-icon class="text-brand-dark text-4xl w-10 h-10 mb-2">chair</mat-icon>
+                }
+                <p class="text-[8px] font-bold text-brand-dark uppercase tracking-wider text-center relative z-10 bg-white/90 px-2 py-1 rounded mt-auto w-full">Guia de Limpeza</p>
+              </div>
+            </div>
+
+            <p class="relative z-10 text-sm font-medium text-gray-700">
+              <span class="text-xl inline-block mb-1">📘</span><br/>
+              Você vai receber gratuitamente um ebook exclusivo com técnicas profissionais de limpeza de estofados para começar ainda hoje!
+            </p>
+          </div>
+        </div>
+
+        <!-- Warning -->
+        <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg mb-8 animate-fade-in-up delay-300">
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <mat-icon class="text-red-500">warning</mat-icon>
+            </div>
+            <div class="ml-3">
+              <p class="text-sm text-red-700 font-medium">
+                Se não encontrar o email, verifique a caixa de spam ou promoções.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center animate-fade-in-up delay-400">
+          <a href="https://mail.google.com" target="_blank" rel="noopener noreferrer" 
+             class="inline-flex items-center justify-center gap-2 bg-brand-light hover:bg-blue-500 text-white text-lg font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 animate-bounce" style="animation-duration: 2s;">
+            <mat-icon>open_in_new</mat-icon>
+            ABRIR MEU EMAIL
+          </a>
+          
+          <div class="mt-6 flex items-center justify-center gap-2 text-sm text-gray-500">
+            <mat-icon class="text-green-500 text-sm w-4 h-4 flex items-center justify-center">check_circle</mat-icon>
+            <span>Centenas de alunos já começaram por este mesmo processo</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full py-8 text-center text-gray-500 text-sm bg-white border-t border-gray-200">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+      <div class="flex items-center gap-1 font-semibold text-brand-dark">
+        <mat-icon class="text-sm w-4 h-4 flex items-center justify-center">school</mat-icon>
+        Vem Limpeza Academy
+      </div>
+      <div class="flex items-center gap-1">
+        <mat-icon class="text-sm w-4 h-4 flex items-center justify-center">phone</mat-icon>
+        925 411 031
+      </div>
+      <div class="flex items-center gap-1">
+        <mat-icon class="text-sm w-4 h-4 flex items-center justify-center">location_on</mat-icon>
+        Kilamba, Luanda
+      </div>
+    </div>
+  </footer>
+
+  <!-- Admin FAB -->
+  <button (click)="showAdminModal.set(true)" class="fixed bottom-4 right-4 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors opacity-50 hover:opacity-100" title="Gerar Imagem (Admin)">
+    <mat-icon>image_edit_auto</mat-icon>
+  </button>
+
+  <!-- Admin Modal -->
+  @if (showAdminModal()) {
+    <div class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+      <div class="bg-white rounded-xl shadow-2xl w-full max-w-md overflow-hidden flex flex-col">
+        <div class="p-4 border-b flex justify-between items-center bg-gray-50">
+          <h3 class="font-bold text-gray-800 flex items-center gap-2">
+            <mat-icon>image_edit_auto</mat-icon>
+            Gerar Capa do Ebook
+          </h3>
+          <button (click)="showAdminModal.set(false)" class="text-gray-500 hover:text-gray-800">
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+        <div class="p-6 space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Prompt da Imagem</label>
+            <textarea [(ngModel)]="prompt" rows="3" class="w-full border border-gray-300 rounded-lg p-2 text-sm focus:ring-2 focus:ring-brand-light focus:border-brand-light outline-none" placeholder="Descreva a imagem..."></textarea>
+          </div>
+          
+          @if (error()) {
+            <div class="p-3 bg-red-50 text-red-700 text-sm rounded-lg border border-red-200">
+              {{ error() }}
+            </div>
+          }
+
+          <button (click)="generateImage()" [disabled]="isGenerating() || !prompt()" class="w-full bg-brand-dark text-white py-2 rounded-lg font-medium hover:bg-blue-900 transition-colors disabled:opacity-50 flex justify-center items-center gap-2">
+            @if (isGenerating()) {
+              <mat-icon class="animate-spin">autorenew</mat-icon>
+              Gerando...
+            } @else {
+              <mat-icon>auto_awesome</mat-icon>
+              Gerar Imagem
+            }
+          </button>
+        </div>
+      </div>
+    </div>
+  }
+</div>
